@@ -1,0 +1,51 @@
+/* Main Sidebar Container */
+.sidebar {
+  width: 260px; /* Fixed width, pushes the dashboard content to the right */
+  height: 100vh;
+  background-color: #1e1e2d; /* Modern dark navy/gray background */
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1); /* Subtle shadow separating it from content */
+  z-index: 10;
+}
+
+/* Sidebar Branding / Title */
+.sidebar h3 {
+  margin: 0;
+  padding: 32px 24px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* Subtle divider line */
+}
+
+/* Navigation List Container */
+.sidebar ul {
+  list-style-type: none; /* Removes default bullets */
+  padding: 0;
+  margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Adds space between menu items */
+}
+
+/* Individual Navigation Items */
+.sidebar li {
+  padding: 14px 24px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #a1a5b7; /* Muted text color for unselected items */
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover Effect for Navigation Items */
+.sidebar li:hover {
+  background-color: #2b2d42; /* Slightly lighter background on hover */
+  color: #ffffff; /* Text turns crisp white */
+  padding-left: 32px; /* Smooth slide-to-the-right effect */
+  border-left: 4px solid #4a90e2; /* Adds a blue accent indicator on the left */
+}

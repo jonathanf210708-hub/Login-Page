@@ -1,0 +1,69 @@
+/* Removes default browser margins and sets a clean base font */
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f4f7f6; /* Very light gray/blue background */
+}
+
+/* Main Layout Wrapper */
+.layout {
+  display: flex;
+  height: 100vh; /* Takes up the full height of the viewport */
+  width: 100%;
+  overflow: hidden; /* Prevents whole-page scrolling, delegates it to .content */
+}
+
+/* Main Content Area (Next to the Sidebar) */
+.content {
+  flex: 1; /* Instructs the content to take up all remaining horizontal space */
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Allows scrolling only inside the content area */
+}
+
+/* Responsive Grid for Cards */
+.cards {
+  display: grid;
+  /* Automatically fits as many 200px (minimum) columns as possible */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  padding: 32px;
+}
+
+/* Individual Card Styling */
+.card {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04); /* Soft, modern shadow */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the text horizontally */
+  justify-content: center;
+  border: 1px solid #e9ecef;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover Effect for Cards */
+.card:hover {
+  transform: translateY(-4px); /* Slight lift effect */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Card Titles ("Total Users", "Total Admins") */
+.card p {
+  margin: 0;
+  font-size: 14px;
+  color: #6c757d;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Card Numbers ("10", "2") */
+.card h2 {
+  margin: 12px 0 0 0;
+  font-size: 42px;
+  color: #2b2d42;
+  font-weight: 700;
+}
